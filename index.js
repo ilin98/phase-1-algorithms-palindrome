@@ -1,9 +1,32 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let reverseArray = [];
+  let wordArray = word.split('')
+  console.log(wordArray)
+  for(letters of wordArray) {
+    reverseArray.unshift(letters)
+  }
+  console.log(reverseArray)
+  let reverseWord = reverseArray.join('')
+  if (reverseWord === word) {
+    return true;
+  } else {
+    return false
+  }
 }
 
-/* 
+
+/*
   Add your pseudocode here
+  take in a string
+  convert string into an array
+  have an empty array
+
+  iterate through each letter of the input array
+    unshift each letter into the empty array
+  join the elements of the array together into a string
+
+  if the new string equals the input string, return true
+  else, return false
 */
 
 /*
