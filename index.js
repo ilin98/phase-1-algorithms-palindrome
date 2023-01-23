@@ -1,11 +1,9 @@
 function isPalindrome(word) {
   let reverseArray = [];
   let wordArray = word.split('')
-  console.log(wordArray)
   for(letters of wordArray) {
     reverseArray.unshift(letters)
   }
-  console.log(reverseArray)
   let reverseWord = reverseArray.join('')
   if (reverseWord === word) {
     return true;
@@ -43,6 +41,9 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("Isaac"))
 }
 
 module.exports = isPalindrome;
